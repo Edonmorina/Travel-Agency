@@ -1,0 +1,27 @@
+@media (min-width: 1200px) {
+    .nav-icon-1 {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px){
+    .nav-icon-1 {
+        display: none;
+    }
+}
+
+@media(max-width: 950px){
+    
+    .nav {
+        height: 10vh;
+    }
+    
+    .nav-icon-1 {
+        display: block;
+    }
+
+    .nav ul {
+        display: none;
+    }
+}
+

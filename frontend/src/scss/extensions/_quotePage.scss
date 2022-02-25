@@ -1,0 +1,111 @@
+$roboto: 'Roboto',sans-serif; 
+$cardBackgroundColor: #FFFFFF;
+.quotes {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 17.5vh;
+    text-align: center;
+    background-color: #C8D7E6;
+
+    .search-bar {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        
+    div{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 2.25rem;
+        div {       
+            border-radius: 1rem;     
+            width: 30%;
+            height: 100%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            input {
+                border: none;
+                background-color: $cardBackgroundColor;
+                width: 85%;
+                height: 100%;
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+                padding-left: 1rem;
+            }
+            input[type="text"] {
+                font-family: $roboto;
+                font-style: italic;
+                font-weight: 400;
+                letter-spacing: 1px;
+            }
+
+            div:focus, input:focus{
+                outline: none;
+            }
+            button{
+                text-decoration: none;
+                border: none;
+                background-color: $cardBackgroundColor;
+                width: 15%;
+                height: 100%;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+    }
+
+    // input {
+        //     text-align: center;
+        //     padding: 1rem;
+        //     width: 20%;
+        //     height: 100%;
+        //     border: none;
+        //     border-radius: 1rem;
+        // }
+
+    .quotes-c {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 2rem;
+        width: 100%;
+        min-height: 75vh;
+
+        .quote {
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            justify-content: space-between;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 1rem;
+            align-items: flex-start;
+            width: calc(45% - 2rem);
+            min-height: 10vh;
+            background-color: $cardBackgroundColor;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+            h1{
+                margin-bottom: .5rem;
+                font-size: clamp(0.25rem, 1rem + 1vw, 2rem);
+                font-style: italic;
+                font-weight: 500;
+            }
+
+            .h5-wrapper {
+                width: 100%;
+                text-align: end;
+            }
+        }
+    }
+}

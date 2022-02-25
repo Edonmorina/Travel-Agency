@@ -1,0 +1,44 @@
+
+@media (min-width: 1500px) {
+    .right-login {
+        input {
+            height: 2.618vw !important;
+            width: 14.882vw !important;
+            padding: 0.762vw !important;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .left-login {
+        display: none !important;
+    }
+    .login-page {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+
+        .popup_container {
+            height: 90vh;
+
+            .popup {
+                margin-top: -10vh;
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .login-page {
+        padding-top: 10vh;
+
+        .popup {
+            margin-top: -10vh;
+            width: 85%;
+        }
+    }
+
+    
+}

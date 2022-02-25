@@ -1,0 +1,110 @@
+.register-page {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100vh;
+    padding-top: 12.5vh;
+    display: flex;
+    
+    .left-register {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+
+        .custom-field {
+            position: relative;
+            font-size: 14px;
+            padding-top: 1.5rem;
+            margin-bottom: 0.4rem;
+            
+        input {
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            -moz-appearance: none;
+            background: #f2f2f2;
+            padding: 0.8rem;
+            border-radius: 0.25rem;
+            width: 250px;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        input::placeholder {
+            color: #222;
+            transition: color 0.3 ease;
+        }
+        
+            .placeholder {
+                position: absolute;
+                left: 1rem;
+                top: calc(50% + 10px);
+                transform: translateY(-50%);
+                color: #aaa;
+                transition: 
+                top 0.3s ease-in-out,
+                top 0.3s ease-in-out,
+                top 0.3s ease-in-out;
+            }
+            input:valid + .placeholder,
+            input:focus + .placeholder {
+                top: 1rem;
+                font-size: 10px;
+                color: #222;
+                letter-spacing: 1px;
+            }
+        }
+
+        .btnWrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+    
+            .registerBtn {
+                margin-top: 1rem;
+                margin-bottom: 0.2rem;
+                border: 1px solid #aaa;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                padding-left: 5rem;
+                padding-right: 5rem;
+                border-radius: 0.25rem;
+                background: #f2f2f2;
+                transition: all 0.15s ease-in-out;
+                opacity: 1 ;
+                cursor: pointer;
+        
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px -2.5px 20px;
+                }
+            }
+        }
+    }
+
+    .right-register {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 55%;
+        height: 100%;
+        background-color: lightblue;
+        border-bottom-left-radius: 3rem;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+        img {
+            width: 60%;
+        }
+        
+    }
+}

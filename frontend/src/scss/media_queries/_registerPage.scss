@@ -1,0 +1,19 @@
+@media (max-width: 750px) {
+    .right-register {
+        display: none !important;
+    }
+    .register-page {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 950px) {
+    
+    .register-page {
+        padding-top: 10vh !important;
+    }
+}
+

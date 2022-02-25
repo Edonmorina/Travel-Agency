@@ -1,0 +1,55 @@
+@media (max-width: 900px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+        .footer-logo-links {
+            display: none;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h5 {
+                font-size: 2.25rem;
+                margin-bottom: 2rem;
+
+                &:first-child {
+                    margin-top: 1.5rem;
+                }
+            }
+
+            .footer-bar {
+                text-align: center;
+                li {
+                    margin-bottom: 1rem;
+                }
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .newsletter {
+            border-top: 1px solid rgba(255, 254, 254, 0.25);
+            width: 100%;
+            margin-top: 1rem;
+            h5 {
+                font-size: 1.75rem;
+            }
+
+            input {
+                width: 85%;
+            }
+
+            button {
+                height: 3rem;
+                width: 35%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+}

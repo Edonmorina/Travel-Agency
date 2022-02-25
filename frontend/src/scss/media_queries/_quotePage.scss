@@ -1,0 +1,27 @@
+@media (max-width: 850px) {
+    .quote {
+        width: 75% !important;
+    }
+    
+    .search-bar {
+        form {
+            div {
+                width: 50% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .quote {
+        width: 95% !important;
+    }
+
+    .search-bar {
+        form {
+            div {
+                width: 62.5% !important;
+            }
+        }
+    }
+}

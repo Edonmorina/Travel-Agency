@@ -1,0 +1,27 @@
+@media (min-width: 950px) {
+    .fs-mobile {
+        display: none !important;
+    }
+}
+
+@media(max-width: 950px){
+    .home-fs {
+        padding-top: 10vh;
+        .first-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            .fs-ls {
+                display: none;
+            }
+            .fs-rs {
+                display: none;
+            }            
+        }
+        .main-btn-c {
+            display: none;
+        }
+    }
+}
+

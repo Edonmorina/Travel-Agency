@@ -1,0 +1,258 @@
+.home-fs {
+    padding-top: 12.5vh;
+    width: 100%;
+    height: 100vh;
+
+    .first-container {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+        .fs-mobile {
+            display: none;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 10%;
+            h1 {
+                font-size: 10vw;
+                letter-spacing: 2.5px;
+            }
+
+            .fs-mobile-btn-wrapper {
+                all: unset;
+                margin-top: 10%;
+                width: 7.5rem;
+                height: 3rem;
+            }
+
+            .fs-mobile-btn {
+                all: unset;
+                width: 100%;
+                height: 100%;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                background-color: transparent;
+                border: 1px solid black;
+                color: black;
+                cursor: pointer;
+                border-radius: 0.75rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;           
+            }
+        }
+        
+
+        .fs-ls {
+
+            h1 {
+                font-size: 5vw;
+                letter-spacing: 0.5vw;
+            }
+            padding-left: 5%;
+            padding-top: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            width: 50%;
+            height: 50vh;
+        }
+
+        .fs-rs {
+            display: none;
+            padding-top: 7.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 70vh;
+
+            .animationContainer {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .up-quote-c{
+                    position: absolute;
+                    top: 7.5%;
+                    left: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding-left: 10%;
+                    width: 100%;
+                    height: 2%;
+                    .f-up-quote {
+                        width: 2rem;
+                    }
+        
+                    .s-up-quote {
+                        width: 2rem;
+                    }
+                }
+    
+                .down-quote-c{
+                    position: absolute;
+                    bottom: 32.5%;
+                    right: 1%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-right: 10%;
+                    width: 100%;
+                    height: 10%;
+                    .f-down-quote {
+                        width: 2rem;
+                    }
+        
+                    .s-down-quote {
+                        width: 2rem;
+                    }
+                }
+            }
+        }
+        
+}
+
+.main-btn-c {
+    margin-top: -3%;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+button {
+    height: 100%;
+    width: 100%;
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+button:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
+
+}
+
+}
+.home-ss {
+    height: 80vh;
+    width: auto;
+
+    .carousel {
+        position: relative;
+        height: 85%;
+        width: 75%;
+        margin: 0 auto;
+
+      
+        .carousel__track-container {
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+            .carousel__track {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+
+                .carousel__slide {
+                    position:absolute;
+                    top: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                .carousel__image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            
+                .carousel__button {
+                    z-index: 50;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 50px;
+                    width: 50px;
+                    background-color: palevioletred;
+                    cursor: pointer;
+                    
+                }
+
+                .carousel__button--left {
+                    left: -4rem;
+                }
+
+                .carousel__button--right {
+                    right: -4rem;
+                }
+
+                .carousel__nav {
+                    display: flex;
+                    justify-content: center;
+                    padding: 10px 0;
+                }
+
+                .carousel_indicator {
+                    border: 0;
+                    border-radius: 50%;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    background-color: rgb(0, 0, 0, 0.3);
+                    margin: 0 12px;
+                }
+            
+                .carousel__indicator.current-slide {
+                    background-color: rgba(0, 0, 0, 0.75);
+                }
+            
+    
+        }
+    }
