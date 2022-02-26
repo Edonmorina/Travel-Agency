@@ -11,7 +11,6 @@ import ScrollToTop from '../../Global/Components/scrollToTop';
 import BurgerMenu from './BurgerMenu';
 import { AnimatePresence} from 'framer-motion';
 
-
 function RouteSwitch() {
     const location = useLocation();
 

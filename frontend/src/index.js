@@ -15,9 +15,10 @@ const myStore = configureStore({
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={myStore}>
-      <Router>
-        <RouteSwitch/>      
-      </Router>
+        <Router>
+          <RouteSwitch/>      
+        </Router>
+      
     </Provider>
     
   </React.StrictMode>,

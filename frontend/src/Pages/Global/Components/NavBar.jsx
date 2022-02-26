@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link , useLocation } from 'react-router-dom';
 import '../../../scss/main.scss';
-import logo from '../assets/svgQuotes.svg';
+import logo from '../assets/logo.svg';
 import { useDispatch} from 'react-redux';
 import { toggle } from '../../../features/toggleState';
 import { useSelector } from 'react-redux';
@@ -37,10 +37,10 @@ function NavBar() {
                 <Link to="/" className='nav-links'>Home</Link>
               </li>
               <li>
-                <Link to="/quotes" className='nav-links'>Quotes</Link>
+                <Link to="/hotels" className='nav-links'>Hotels</Link>
               </li>
               <li>
-                <Link to="/authors" className='nav-links'>Authors</Link>
+                <Link to="/flights" className='nav-links'>Flights</Link>
               </li>
               {
               location.pathname !== '/auth/login'

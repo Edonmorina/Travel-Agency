@@ -7,7 +7,6 @@ function HomePageSecondSection() {
 
     return (
         <div className="home-ss">
-            <ImageSlider slides={SliderData}/>
         </div>
     )
 }
