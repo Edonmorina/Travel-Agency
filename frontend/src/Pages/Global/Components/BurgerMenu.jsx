@@ -17,10 +17,10 @@ function BurgerMenu() {
                 <Link to="/" onClick={() => { dispatch(toggle());} }>Home</Link>
             </li>
             <li>
-                <Link to="/quotes" onClick={() => { dispatch(toggle());} }>Quotes</Link>
+                <Link to="/hotels" onClick={() => { dispatch(toggle());} }>Hotels</Link>
             </li>
             <li>
-                <Link to="/authors" onClick={() => { dispatch(toggle());} }>Authors</Link>
+                <Link to="/flights" onClick={() => { dispatch(toggle());} }>Flights</Link>
             </li>
             <li>
                 <Link to="/auth/login" onClick={() => { dispatch(toggle());} }>Login / Register</Link>
