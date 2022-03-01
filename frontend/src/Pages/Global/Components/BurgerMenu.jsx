@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch} from 'react-redux';
 import { toggle } from '../../../features/toggleState';
+import bgImg from '../assets/logo.svg';
 
 
 
@@ -11,7 +12,7 @@ function BurgerMenu() {
     const toggledState = useSelector((state) => state.toggle.value);
     const dispatch = useDispatch();
 
-    return <div className={toggledState ? 'burger-menu burger-open' : 'burger-menu'}>
+    return <div className={toggledState ? 'burger-menu burger-open' : 'burger-menu'} style={{ backgroundImage: `url(${bgImg})`}}>
         <ul>
             <li>
                 <Link to="/" onClick={() => { dispatch(toggle());} }>Home</Link>

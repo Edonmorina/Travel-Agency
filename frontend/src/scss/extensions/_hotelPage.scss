@@ -12,6 +12,10 @@
         h1 {
             margin-bottom: 1rem;
             font-family: 'Poppins', sans-serif;
+
+            @media screen and (max-width: 600px){
+                font-size: 1.65rem;
+            }
         }
         .hotels__input {
             display: flex;
@@ -22,7 +26,19 @@
             height: 2.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
-            margin-bottom: 10%;
+            margin-bottom: 4rem;
+
+            @media screen and (max-width: 1000px){
+                width: 50%;
+            }
+
+            @media screen and (max-width: 750px){
+                width: 70%;
+            }
+
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
     
             input {
                 all:unset;
@@ -59,5 +75,221 @@
 
             
         }
+    }
+
+    .hotels__cards_c {
+        width: 100%;
+        min-height: 75vh;
+        padding: 0 4rem 5rem;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 420px) {
+            padding: 0 1rem 5rem;
+        }
+
+        .hotels__cards {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            width: 100%;
+            height: 15rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+            margin-bottom: 3rem;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                transition: all 0.25s ease-in-out;
+            }
+
+            &:last-child {
+                margin-bottom: 0rem;
+            }
+
+            @media screen and (max-width: 800px) {
+                &:hover {
+                    transform: scale(1);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+                    transition: all 0.25s ease-in-out;
+                }
+            }
+
+            @media screen and (max-width: 750px) {
+                flex-direction: column;
+            }
+
+            
+            
+            .image {
+                position: relative;
+                height: 100%;
+                width: 350px;
+
+                .prev-img, .next-img {
+                    all: unset;
+                    background-color: transparent;
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 50%;
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                        color: black;
+                    }
+                }
+
+                .prev-img {
+                    left: 5px;
+                }
+
+                .next-img {
+                    right: 5px;
+                }
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;                    
+                }
+
+                @media screen and (max-width: 750px) {
+                    width: 100%;
+                    height: 90%;
+                }
+
+            }
+
+            .hotels__cards__content {
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                background-color: white;
+
+                @media screen and (max-width: 750){
+                    height: auto;
+                    padding-bottom: 10px;
+                }
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 70%;
+                    padding: 10px ;
+    
+                    .head {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        h4 {
+                            font-weight: 300;
+                            letter-spacing: 1px;
+
+                            @media screen and (max-width: 450){
+                                font-size: 0.5rem;
+                            }
+                        }
+    
+                        @media screen and (min-width: 1000px){
+                            flex: 1;
+                        }
+    
+                        h1 {
+                            @media screen and (max-width: 900px) {
+                                font-size: 1.25rem;
+                            }
+                            @media screen and (max-width: 750px) {
+                                font-size: 1rem;
+                            }
+
+                            @media screen and (max-width: 450px){
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+    
+                    .body {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        width: 85%;
+                        p {
+                            font-size: 0.725rem;
+                            color: gray;
+                            @media screen and (max-width: 750px) {
+                                font-size: 0.6rem;
+                            }
+                        }
+    
+                        p > b {
+                            font-weight: 700;
+                            letter-spacing: 0.5px;
+                        }
+                        @media screen and (max-width: 750px) {
+                            display: none;
+                        }
+                    }
+    
+                }
+    
+                .rating {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    height: 10%;
+                    width: 100%;
+                    margin-top: 10px;
+    
+                    @media screen and (max-width: 750px) {
+                        font-size: 0.7rem;
+                    }
+                    @media screen and (max-width: 450px){
+                        font-size: 0.5rem;
+                    }
+                }
+            }
+    
+            .price-tag {
+                height: 100%;
+                width: 20%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                flex-direction: column;
+                padding-right: 10px;
+                padding-bottom: 10px;
+    
+                p {
+                    font-weight: 300;
+                    font-size: 0.6rem;
+                    
+                    @media screen and (max-width: 500px){
+                        font-size: 0.5rem;
+
+                        &:last-child {
+                            font-size: 0.35rem;
+                        }
+                    }
+
+                }
+            }
+            }
+            
+        
     }
 }

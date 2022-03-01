@@ -12,6 +12,10 @@
         h1 {
             margin-bottom: 1rem;
             font-family: 'Poppins', sans-serif;
+
+            @media screen and (max-width: 600px){
+                font-size: 1.65rem;
+            }
         }
         .flights__input {
             display: flex;
@@ -22,7 +26,19 @@
             height: 2.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
-            margin-bottom: 10%;
+            margin-bottom: 4rem;
+
+            @media screen and (max-width: 1000px){
+                width: 50%;
+            }
+
+            @media screen and (max-width: 750px){
+                width: 70%;
+            }
+
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
     
             input {
                 all:unset;
@@ -32,6 +48,8 @@
                 padding-left: 1.5rem;
                 font-family: 'Poppins',sans-serif;
                 border-radius: 0.5rem 0 0 0.5rem;
+
+                
             }
     
             button {
@@ -55,9 +73,97 @@
         }
 
         .header__choose {
-            z-index: 2;
+            z-index: 2;           
+        }
+    }
 
-            
+    .flights__cards_c {
+        width: 100%;
+        min-height: 75vh;
+        padding: 0 4rem 5rem;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .flights__cards {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            height: 9rem;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+            margin-bottom: 3rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                transform: scale(1.01);
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                transition: all 0.25s ease-in-out;
+            }
+        
+            &:last-child {
+                margin-bottom: 0rem;
+            }
+
+            .flights__cards__fs {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+                h4 {
+                    font-weight: 500;
+                }
+
+                .dep-arav {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    h4 {
+                        font-weight: 500;
+                    }
+                    svg {
+                        margin-right: 5px;
+                        &:last-child {
+                            margin-left: 5px;                            
+                            margin-right: 0px;                            
+                        }
+                    }
+                }
+            }
+
+            .flights__cards__ss {
+                display: flex;
+                flex-direction: column;
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    h4 {
+                        font-weight: 500;
+                    }
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .flights__cards__ts {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                h4 {
+                    color: red;
+                    font-weight: 600;
+                }
+            }
         }
     }
 }

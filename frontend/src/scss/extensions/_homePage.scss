@@ -26,10 +26,26 @@
         h1 {
             z-index: 2;
             font-family: 'Pacifico', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 4.25vw;
+            font-size: 3.75rem;
             color: #ce5265;
             text-shadow: -2px 2px 7.5px rgba(0, 0, 0,0.75);     
             letter-spacing: 1px;
+
+            @media screen and (max-width: 700px) {
+                font-size: 3rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 2.5rem;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 1.75rem;
+            }
         }
         h4 {
             z-index: 2;
@@ -39,15 +55,41 @@
             font-size: 1.65rem;
             text-shadow: -2px 2px 2.5px rgba(0, 0, 0,0.65);     
             letter-spacing: 1px;
-            margin: 2rem 0 1.25rem;       
+            margin: 2rem 0 1.25rem;
+            
+            @media screen and (max-width: 700px) {
+                font-size: 1.45rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 1.25rem;
+
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 1rem;
+            }
+
         }
 
-        .header__input {
+        .header__hotel_input {
             z-index: 2;
             width: 35%;
             height: 2.5rem;
             border-radius: 0.5rem;
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+
+            @media screen and (max-width: 1000px){
+                width: 50%;
+            }
+
+            @media screen and (max-width: 750px){
+                width: 70%;
+            }
+
+            @media screen and (max-width: 500px){
+                width: 90%;
+            }
 
             input {
                 all:unset;
@@ -70,24 +112,35 @@
                 align-items: center;
                 padding-right: 0.5rem;
                 border-radius: 0 0.5rem 0.5rem 0;
+
                 svg {
                     width: 75%;
                     height: 75%;
-                    color: black;
                     cursor: pointer;
                 }
             }
         }
 
         .header__choose {
-            width: 35%;
+            width: 45%;
             height: 3rem;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            button:last-child {
-                margin-left:1rem;
+
+            button:first-child {
+                margin-right: 0.5rem;
             }
+            button:last-child {
+                margin-left: 0.5rem;
+            }
+
+            @media screen and (max-width: 1000px){
+                width: 100%;
+                justify-content: center;
+            }
+
+            
 
             button {
                 all:unset;
@@ -113,6 +166,73 @@
             .date {
                 z-index: 5;
             }
+        }
+
+        .header__flight_input {
+            z-index: 2;
+            width: 45%;
+            height: 3rem;
+            border-radius: 0.5rem;
+
+            @media screen and (max-width: 900px){
+                flex-direction: column;
+            }
+
+            .dep-input {
+                all: unset;
+                width: 50%;
+                height: 100%;
+                background-color: white;
+                border: none;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+                padding: 0 1rem;
+            }
+
+                .divider {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    margin: 0 1rem;
+                    color: black;
+                }
+
+                .arriv-input {
+                    all: unset;
+                    height: 100%;
+                    width: calc(50% - 2.5rem);
+                    border-top-left-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                    background-color: white;
+                    border: none;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+                    padding: 0 1rem;
+                }
+
+                button {
+                    z-index: 5;
+                    all: unset;
+                    width: 2.5rem;
+                    height: 100%;
+                    background-color: white;
+                    border: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-right: 0.5rem;
+                    border-radius: 0 0.5rem 0.5rem 0;
+                    svg {
+                        width: 75%;
+                        height: 75%;
+                        cursor: pointer;
+                        transition: all 0.2s ease-in-out;
+
+                        &:hover {
+                            transition: all 0.2s ease-in-out;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
         }
     }
 }
