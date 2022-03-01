@@ -7,7 +7,6 @@ import firstImg from '../assets/1.webp';
 import secondImg from '../assets/2.webp';
 import thirdImg from '../assets/3.webp';
 
-import ImgCarousel from './ImgCarousel';
 
 
 function Hotels() {
