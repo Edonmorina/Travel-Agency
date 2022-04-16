@@ -1,7 +1,7 @@
 import React, { useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
-import '../../../scss/main.scss'
-import shhMan from '../assets/shh-man.svg';
+import '../../../scss/main.scss';
+import hotel_staff from '../assets/hotel_staff.svg';
 import { motion } from 'framer-motion';
 import { containerVariants, h1Variant, inputFieldEmailVariant, inputFieldPasswordVariant, inputFieldRePasswordVariant, btnVariant, h6Variant } from './framer_variants/registerPageVariants';
 import { signUp } from '../../../Firebase/Auth/signUp';
@@ -182,7 +182,7 @@ const RegisterPage = () => {
             animate="visible"
             exit="exit"
             >
-                <img src={shhMan} alt="shhMan" />
+                <img src={hotel_staff} alt="shhMan" />
             </motion.div>
             
         </div>

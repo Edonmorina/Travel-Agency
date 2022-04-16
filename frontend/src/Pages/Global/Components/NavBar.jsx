@@ -15,9 +15,9 @@ function NavBar() {
 
     const listenScrollEvent = (e) => {
       if (window.scrollY < 1) {
-        return setNav("nav")
+        return setNav("nav");
       } else {
-        return setNav("nav navMove")
+        return setNav("nav navMove");
       } 
     }
     
@@ -72,6 +72,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-
-
