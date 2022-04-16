@@ -12,13 +12,17 @@ function FlightList({flights}) {
         </section>
     }
 
+    const returnTime = (dateTime) => {
+        return dateTime.split(" ")[1];
+    }
+
     return(
         <section className="flights__cards_c">
             {
                 flights.map((flight) => {
                     return <div className="flights__cards" key={flight.id}>
                         <div className="flights__cards__fs">
-                            <h1>{flight.departureTime} - {flight.arrivalTime}</h1>
+                            <h1>{returnTime(flight.departureTime)} - {returnTime(flight.arrivalTime)}</h1>
                             <div className='dep-arav'><GiAirplaneDeparture/><span> </span> <h4>{flight.departureLocation} - {flight.arrivalLocation}</h4><GiAirplaneArrival/> </div>
                             <h4 className='airline'>{flight.airline}</h4>
                         </div>
@@ -30,7 +34,7 @@ function FlightList({flights}) {
 
                         <div className="flights__cards__ts">
                             <h4>{flight.ticketsLeft} more left</h4>
-                            <h1>$ {flight.flightType}</h1>
+                            <h1><span>$</span>{flight.price}</h1>
                             <p>{flight.flightType}</p>
                         </div>
                     </div>

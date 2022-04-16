@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { h1Variant, inputFieldEmailVariant, inputFieldPasswordVariant, btnVariant, h6Variant } from './framer_variants/loginPageVariants';
 
-import { loginEmailPassword as signIn} from '../../../Firebase/Auth/signIn';
-
 function LoginForm({isPopupOpen, setIsPopupOpen}) {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -13,7 +11,7 @@ function LoginForm({isPopupOpen, setIsPopupOpen}) {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    signIn(email,password).then((userCredential) => console.log(userCredential.user)).catch(err => console.error(err.message));
+    // signIn(email,password).then((userCredential) => console.log(userCredential.user)).catch(err => console.error(err.message));
   }
 
   const togglePopup = () => {

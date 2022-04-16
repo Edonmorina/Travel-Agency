@@ -21,6 +21,8 @@ function Flights() {
         searchInput.current.addEventListener("keypress", handleSearchKeyDown)
 
         getFlightData();
+
+
     }, [])
     
 

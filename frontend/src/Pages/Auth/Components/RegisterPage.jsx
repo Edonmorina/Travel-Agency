@@ -4,7 +4,6 @@ import '../../../scss/main.scss';
 import hotel_staff from '../assets/hotel_staff.svg';
 import { motion } from 'framer-motion';
 import { containerVariants, h1Variant, inputFieldEmailVariant, inputFieldPasswordVariant, inputFieldRePasswordVariant, btnVariant, h6Variant } from './framer_variants/registerPageVariants';
-import { signUp } from '../../../Firebase/Auth/signUp';
 
 const RegisterPage = () => {
     const emailRef = useRef(null);
@@ -16,7 +15,7 @@ const RegisterPage = () => {
         const email = emailRef.current.value;
         const password = pwdRef.current.value;
         
-        signUp(email,password).then((userCredential) => console.log(userCredential)).catch(err => console.log(err.message));
+        // signUp(email,password).then((userCredential) => console.log(userCredential)).catch(err => console.log(err.message));
     
     }
 
