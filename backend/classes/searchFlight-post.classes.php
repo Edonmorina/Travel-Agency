@@ -23,14 +23,14 @@ class SearchFlightPost {
     }
     
     // Get Posts
-    public function read($searchTerm) {
-        if(empty($searchTerm) || $searchTerm === null) {
+    public function read($depSearchTerm, $arriSearchTerm) {
+        if(empty($depSearchTerm) || $arriSearchTerm === null && empty($depSearchTerm) || $arriSearchTerm === null) {
             // Create query
             $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight FROM " . $this->table;
         }else {
             // Create query
             $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight FROM " . $this->table . 
-            " WHERE departure_location LIKE '%" . $searchTerm . "%' OR arrival_location LIKE '%" . $searchTerm . "%' OR price LIKE '%" . $searchTerm . "%' LIMIT 25";
+            " WHERE departure_location LIKE '%" . $depSearchTerm . "%' OR arrival_location LIKE '%" . $arriSearchTerm . "%' LIMIT 25";
         }        
 
         // Prepare stmt

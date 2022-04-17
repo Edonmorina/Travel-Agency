@@ -3,10 +3,12 @@ import '../../../scss/main.scss';
 import { AiOutlineSearch } from 'react-icons/ai';
 import FlightList from './FlightList';
 import axios from 'axios';
+import { IoIosAirplane } from 'react-icons/io';
 
 function Flights() {
 
-    const searchInput = useRef("");
+    const depSearchInput = useRef("");
+    const arriSearchInput = useRef("");
     const [flights, setFlights] = useState([]);
 
     const handleSearchKeyDown = (e) => {
@@ -17,18 +19,17 @@ function Flights() {
     }
 
     useEffect(() => {
-
-        searchInput.current.addEventListener("keypress", handleSearchKeyDown)
+        depSearchInput.current.addEventListener("keypress", handleSearchKeyDown);
+        arriSearchInput.current.addEventListener("keypress", handleSearchKeyDown);
 
         getFlightData();
-
-
     }, [])
     
 
     const getFlightData = async () => {
         const formData = new FormData();
-        formData.append('flightSearchTerm', searchInput.current.value);
+        formData.append('depSearchTerm', depSearchInput.current.value);
+        formData.append('arriSearchTerm', arriSearchInput.current.value);
         const res = await axios.post('http://localhost:8066/travel_agency_backend/includes/searchFlight.inc.php', formData);
         setFlights(res.data.flights);
     }
@@ -37,13 +38,14 @@ function Flights() {
     return(
         <div className='flights' onLoad={window.scroll(0,0)}>
             <header className='app__flex'>
-                <h1>Looking for a flight ?</h1>
-                <div className="flights__input">
-                    <input type="text" ref={searchInput} placeholder="Search for your destination..."/> 
-                    <button>{<AiOutlineSearch 
-                        onClick={() => {
+                <h1>Looking for a flight?</h1>
+                <div className="header__flight_input app__flex">
+                    <input type="text" ref={depSearchInput} className="dep-input" placeholder="Where you are..."/> 
+                    <IoIosAirplane className="divider"/>
+                    <input type="text" ref={arriSearchInput} className="arriv-input" placeholder="Where you are going..."/>
+                    <button onClick={() => {
                             getFlightData();
-                        }}/>}</button>
+                        }}><AiOutlineSearch/></button>
                 </div>
             </header>
             <FlightList flights={flights}/>

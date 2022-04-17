@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php
 
+<?php
+$http_origin = $_SERVER['HTTP_ORIGIN'];
+
+$allowed_domains = array(
+  'http://localhost:3000',
+  'https://edon-travel.netlify.app',
+);
+
+if (in_array($http_origin, $allowed_domains))
+{  
+    header("Access-Control-Allow-Origin: $http_origin");
+}
     if(isset($_POST['submit'])) {
 
-    // Grabbing the data
+        // Grabbing the data
     $uid = $_POST["uid"];
     $pwd = $_POST["pwd"];
     $pwdRepeat = $_POST["rePwd"];
@@ -26,9 +28,7 @@
     
     // Running error handlers and user signup
     $signup->signupUser();
-
+    
     header("error: None");
     }
 ?>
-</body>
-</html>

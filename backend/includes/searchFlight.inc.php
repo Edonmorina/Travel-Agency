@@ -1,6 +1,16 @@
 <?php
 // Headers
-header('Access-Control-Allow-Origin: *');
+$http_origin = $_SERVER['HTTP_ORIGIN'];
+
+$allowed_domains = array(
+  'http://localhost:3000',
+  'https://edon-travel.netlify.app',
+);
+
+if (in_array($http_origin, $allowed_domains))
+{  
+    header("Access-Control-Allow-Origin: $http_origin");
+}
 header('Content-type: application/json');
 
 include_once '../classes/dbh.classes.php';
@@ -13,10 +23,11 @@ $db = $database->connect();
 // Instantiate flight post object
 $flight = new SearchFlightPost($db);
 
-$searchTerm = $_POST['flightSearchTerm'];
+$depSearchTerm = $_POST['depSearchTerm'];
+$arriSearchTerm = $_POST['arriSearchTerm'];
 
 // flight post query
-$result = $flight->read($searchTerm);
+$result = $flight->read($depSearchTerm, $arriSearchTerm);
 // Get row count
 $num = $result->rowCount();
 
