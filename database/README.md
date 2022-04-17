@@ -1,2 +1,2 @@
 ### Setting up the database
-Go into your xammp MySQL(MariaDB) and create a database called `travel_agency` and run the sql query thats inside the database folder in that database.
+Go into your xammp `phpmyadmin`(http://localhost:8066/phpmyadmin/) and create a database called `travel_agency` and run the sql query thats inside the database folder in that database.
