@@ -1,0 +1,110 @@
+<?php
+
+class SignupContr extends SignUp {
+    
+    private $uid;
+    private $pwd;
+    private $pwdRepeat;
+    private $email;
+
+    public function __construct($uid, $pwd, $pwdRepeat, $email) {
+        $this->uid = $uid;
+        $this->pwd = $pwd;
+        $this->pwdRepeat = $pwdRepeat;
+        $this->email = $email;
+    }
+
+    public function signupUser() {
+        if($this->emptyInput() == false) {
+            header("error: Empty-Input");
+            exit();
+        }
+        if($this->invalidUid() == false) {
+            header("error: Invalid-Uid");
+            exit();
+        }
+        if($this->invalidEmail() == false) {
+            header("error: Invalid-Email");
+            exit();
+        }
+        if($this->pwdMatch() == false) {
+            header("error: Pwd-Dont-Match");
+            exit();
+        }
+        if($this->uidTakenCheck() == false) {
+            header("error: Uid-Taken");
+            exit();
+        }
+
+        if($this->emailTakenCheck() == false) {
+            header("error: Email-Taken");
+            exit();
+        }
+
+        $this->setUser($this->uid, $this->pwd, $this->email);
+
+    }
+
+    private function emptyInput() {
+        $result = false;
+        if(empty($this->uid) || empty($this->pwd) || empty($this->pwdRepeat) || empty($this->email)) {
+            $result = false;
+        }else {
+            $result = true;
+        }
+        return $result;
+    }
+
+    private function invalidUid() {
+        $result = false;
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)){
+            $result = false;
+        }else{
+            $result = true;
+        }
+        return $result;
+    }
+
+    private function invalidEmail() {
+        $result = false;
+        if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $result = false;
+        }else{
+            $result = true;
+        }
+        return $result;
+    }
+
+    private function pwdMatch() {
+        $result = false;
+        if($this->pwd !== $this->pwdRepeat) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    }
+
+
+    private function uidTakenCheck() {
+        $result = false;
+        if(!$this->checkUsername($this->uid)) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    }
+
+    private function emailTakenCheck() {
+        $result = false;
+        if(!$this->checkUserEmail($this->email)) {
+            $result = false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    }
+
+}
+?>
