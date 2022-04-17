@@ -18,10 +18,10 @@ Clone down this repository. You will need `xammp` local server and `node`,`npm` 
 Installation:
 
 ### Setting up the local server
-Inside the xammp htdocs folder make a folder called `travel_agency_backend` and insert the folders that are located inside `backend` into that folder and change the localhost port to `8066`.
+Inside the xammp htdocs folder make a folder called `travel_agency_backend` and insert the folders that are located inside `backend` into that folder, change the localhost port to `8066` and start the `Apache` and `MySQL` modules inside the xammp control panel.
 
 ### Setting up the database
-Go into your xammp mysql(MariaDB) and create a database called `travel_agency` and run the sql query thats inside the database folder in that database.
+Go into your xammp MySQL(MariaDB) and create a database called `travel_agency` and run the sql query thats inside the database folder in that database.
 
 ### Setting up the client server
 Open a terminal(command prompt) and go inside the frontend folder and run the following command to start up the client server:
