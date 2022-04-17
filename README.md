@@ -30,6 +30,8 @@ Go into your xammp `phpmyadmin`(http://localhost:8066/phpmyadmin/) and create a 
 Open a terminal(command prompt) and go inside the frontend folder and run the following command to start up the client server:
 `npm start`
 
+Make sure to have this chrome extension enabled `https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc`
+
 To run test suite(optional):  
 
 `npm test`  
