@@ -1,0 +1,13 @@
+.app__dashboardContainer {
+    height: 100vh;
+    width: 100%;
+    padding-top: 11vh;
+
+    .app__dashboardContainer-dashboard {
+        background-color: #43AFE4;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.75);
+        height: 80%;
+        width: 80%;
+        border-radius: 2rem;
+    }
+}

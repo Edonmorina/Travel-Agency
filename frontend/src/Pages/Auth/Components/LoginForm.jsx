@@ -1,24 +1,31 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { h1Variant, inputFieldEmailVariant, inputFieldPasswordVariant, btnVariant, h6Variant } from './framer_variants/loginPageVariants';
+import axios from 'axios';
+
 
 function LoginForm({isPopupOpen, setIsPopupOpen}) {
-  const emailRef = useRef(null);
-  const passwordRef = useRef(null);
 
-  const handleSignIn = () => {
-    const email = emailRef.current.value;
-    const password = passwordRef.current.value;
+  const [uid, setUid] = useState("");
+  const [pwd, setPwd] = useState("");
 
-    // signIn(email,password).then((userCredential) => console.log(userCredential.user)).catch(err => console.error(err.message));
-  }
+  const handleLoginAuth = () => {
+    const postUrl = 'http://localhost:8066/quotes_app_backend/includes/signup.inc.php';
+    const formData = new FormData();
+    formData.append('uid', uid);
+    formData.append('pwd', pwd);
+    axios.post(postUrl, formData)
+      .then(res => {
+        console.log(res);
+      })
+  }  
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   }
 
-  return <div
+  return <form
         className="right-login">
     <motion.h1 
         variants={h1Variant}
@@ -36,7 +43,7 @@ function LoginForm({isPopupOpen, setIsPopupOpen}) {
         animate="visible"
         exit="exit"
       >
-          <input type="email" name='email' ref={emailRef} required/>
+          <input type="email" required/>
           <span className='placeholder'>Enter email</span>
       </motion.label>
 
@@ -48,7 +55,7 @@ function LoginForm({isPopupOpen, setIsPopupOpen}) {
         animate="visible"
         exit="exit"
         >
-          <input type="password" id="password" name='password' ref={passwordRef} required/>
+          <input type="password" id="password" required/>
           <span className='placeholder'>Enter Password</span>
       </motion.label>
 
@@ -59,8 +66,9 @@ function LoginForm({isPopupOpen, setIsPopupOpen}) {
         animate="visible"
         exit="exit">
         <button
+        type='submit'
         className='loginBtn'
-        onClick={() => handleSignIn()}
+        onClick={() => { handleLoginAuth() }}
         >
         Login!
         </button>
@@ -83,7 +91,7 @@ function LoginForm({isPopupOpen, setIsPopupOpen}) {
       >Dont have an account? 
       <Link to='/auth/register' className="auth_links"> Register here</Link>
     </motion.h6>
-</div>;
+</form>;
 }
 
 export default LoginForm;

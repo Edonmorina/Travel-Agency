@@ -5,7 +5,7 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import '../../../scss/main.scss';
 
 function ScrollToTop() {
-    const icon = <FontAwesomeIcon icon={faArrowUp} color="#CC3300" size="lg" />; 
+    const icon = <FontAwesomeIcon icon={faArrowUp} color="#D53465" size="lg" />; 
 
     const [visible, setVisible] = useState("scrollToTop-c");
 

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import '../../../scss/main.scss';
-import plane from '../assets/plane.svg'
 import { containerVariants } from './framer_variants/loginPageVariants';
 import LoginForm from './LoginForm';
 import ForgotPasswordPopup from './ForgotPasswordPopup';
-
+import planeImage from '../assets/plane.svg';
 
 function LoginPage() {   
     
@@ -23,7 +22,7 @@ function LoginPage() {
             animate="visible"
             exit="exit"
             >
-                <img src={plane} alt="manAndBook" />
+                <img src={planeImage} alt="manAndBook" />
             </motion.div>   
             
             <LoginForm isPopupOpen={popupOpen} setIsPopupOpen={setPopupOpen}/>
