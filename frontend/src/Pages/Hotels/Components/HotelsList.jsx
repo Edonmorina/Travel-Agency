@@ -10,6 +10,7 @@ import thirdImg from '../assets/3.webp';
 function HotelsList({hotels}) {
     
     const [imgIndex, setImgIndex] = useState(0);
+    const TAX_ON_PRICE = 5;
 
     if(hotels === undefined) {
         return <section className='flights__cards_c'>
@@ -59,7 +60,6 @@ function HotelsList({hotels}) {
                         <img src={slideImages[imgIndex].url} alt="random" />
                         <button className='prev-img' onClick={() => prevImg()}><BsArrowLeftShort /></button>
                         <button className='next-img' onClick={() => nextImg()}><BsArrowRightShort /></button>
-
                     </div>
                     <div className="hotels__cards__content">
                     <div className="content">
@@ -78,7 +78,7 @@ function HotelsList({hotels}) {
                     <div className="price-tag">
                         <h1><b><span>$</span>{hotel.price}</b></h1>
                         <p>per night</p>
-                        <p><b>$222 total</b></p>
+                        <p><b>$<span></span>{hotel.price + parseInt(((TAX_ON_PRICE/100) * hotel.price))} total</b></p>
                         <p>Includes taxes & fees</p>
                     </div>
                     </div>

@@ -51,6 +51,7 @@ if($num > 0) {
             'ticketsLeft' => $tickets_left,
             'price' => $price,
             'flightType' => $type_of_flight,
+            'stops' => $stops
         );
 
         // Push to "flights"

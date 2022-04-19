@@ -53,15 +53,12 @@ function FlightList({flights}) {
                             <h4 className='airline'>{flight.airline}</h4>
                         </div>
                     
-                        <div className="flights__cards__ss">
-                            <div><MdAirplanemodeActive/><h4>5h 45m (1 stop)</h4></div>
-                            <div><MdAirplanemodeActive/><h4>1h 50m in Warsaw (WAW)</h4></div>
-                        </div>
 
                         <div className="flights__cards__ts">
                             <h4>{returnTicketsLeft(flight.ticketsLeft)}</h4>
                             <h1><span>$</span>{flight.price}</h1>
                             <p>{flight.flightType}</p>
+                            <div><MdAirplanemodeActive/><h4>{(flight.stops == 1) ? flight.stops + " stop" : flight.stops + " stops"}</h4></div>
                         </div>
                     </div>
                 })}

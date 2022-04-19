@@ -6,18 +6,9 @@ import bg from '../assets/bg.svg';
 
 function HomePageFirstSection() {
 
-    const [btnChecked, setBtnChecked] = useState(false);
-    const [hotelSearch, setHotelSearch] = useState("");
-    const handleHotelSearch = () => {
-        if(hotelSearch === "") {
-            return;
-        }
-
-    }
-
     return(
         <section className="home-fs" onLoad={window.scroll(0,0)}>
-            <header className="app__flex" style={!btnChecked ? {backgroundImage: `url(${bg})`, paddingTop: '2rem'} : {backgroundImage: `url(${bg})`, paddingTop: '2.5rem'}}>
+            <header className="app__flex" style={{backgroundImage: `url(${bg})`}}>
                 <div>
                     <h1>Travel Sense</h1>
                 <h4>Your traveling companion</h4>

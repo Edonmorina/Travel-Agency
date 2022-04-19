@@ -100,6 +100,10 @@
             margin-bottom: 3rem;
             cursor: pointer;
             transition: all 0.25s ease-in-out;
+
+            @media screen and (max-width: 750px){
+                margin-bottom: 6rem;
+            }
             
             &:hover {
                 transform: scale(1.01);

@@ -18,13 +18,8 @@
             }
         }
     
-            @media screen and (max-width: 750px){
-                width: 70%;
-            }
+           
 
-            @media screen and (max-width: 500px){
-                width: 90%;
-            }
     
             input {
                 all:unset;
@@ -68,6 +63,16 @@
         max-width: 1440px;
         margin: 0 auto;
 
+        @media screen and (max-width: 800px){
+            padding: 0 3rem 4rem;
+
+        }
+
+        @media screen and (max-width: 450px){
+            padding: 0 1rem 2rem;
+
+        }
+
         .flights__cards {
             position: relative;
             display: flex;
@@ -91,15 +96,37 @@
                 margin-bottom: 0rem;
             }
 
+            @media screen and (max-width: 800px){
+                height: 7rem;
+            }
+
             .flights__cards__fs {
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
                 flex-direction: column;
 
+                h1 {
+                    @media screen and (max-width:800px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                h3 {
+                    @media screen and (max-width: 800px){
+                        font-size: 0.9rem;
+                    }
+                    
+                }
+
                 h4 {
                     font-weight: 500;
+
+                    @media screen and (max-width: 800px){
+                        font-size: 0.75rem;
+                    }
                 }
+
 
                 .dep-arav {
                     display: flex;
@@ -118,9 +145,33 @@
                 }
             }
 
-            .flights__cards__ss {
+            
+            .flights__cards__ts {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+
+                h1 {
+                    @media screen and (max-width: 800px){
+                        font-size: 1rem;
+                    }
+                }
+
+                h3 {
+                    @media screen and (max-width: 800px){
+                        font-size: 0.9rem;
+                    }
+                }
+                
+                h4 {
+                    color: red;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 800px){
+                        font-size: 0.75rem;
+                    }
+                }
 
                 div {
                     display: flex;
@@ -128,24 +179,20 @@
                     align-items: center;
 
                     h4 {
-                        font-weight: 500;
+                        color: black;
                     }
-
                     svg {
+                        @media screen and (max-width: 800px){
+                            width: 0.75rem;
+                        }
                         margin-right: 5px;
                     }
                 }
-            }
 
-            .flights__cards__ts {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-end;
-
-                h4 {
-                    color: red;
-                    font-weight: 600;
+                p {
+                    @media screen and (max-width: 800px){
+                        font-size: 0.75rem;
+                    }
                 }
             }
         }
@@ -154,14 +201,24 @@
 
 .header__flight_input {
     z-index: 2;
-        width: 45%;
+        width: 50%;
         height: 3rem;
         border-radius: 0.5rem;
         margin-bottom: 4rem;
 
         @media screen and (max-width: 900px){
-            flex-direction: column;
+            width: 70%
         }
+
+        @media screen and (max-width: 700px){
+            width: 80%
+        }
+
+        @media screen and (max-width: 500px){
+            width: 90%
+        }
+
+        
 
         .dep-input {
             all: unset;

@@ -15,6 +15,7 @@ class SearchFlightPost {
     public $tickets_left; 
     public $price;
     public $type_of_flight;
+    public $stops;
     
     // Constructor with DB
     
@@ -26,10 +27,10 @@ class SearchFlightPost {
     public function read($depSearchTerm, $arriSearchTerm) {
         if(empty($depSearchTerm) || $arriSearchTerm === null && empty($depSearchTerm) || $arriSearchTerm === null) {
             // Create query
-            $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight FROM " . $this->table;
+            $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight, stops FROM " . $this->table;
         }else {
             // Create query
-            $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight FROM " . $this->table . 
+            $query = "SELECT flight_id, departure_time, arrival_time, departure_location, arrival_location, airline, tickets_left, price, type_of_flight, stops FROM " . $this->table . 
             " WHERE departure_location LIKE '%" . $depSearchTerm . "%' OR arrival_location LIKE '%" . $arriSearchTerm . "%' LIMIT 25";
         }        
 

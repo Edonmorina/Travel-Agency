@@ -21,9 +21,6 @@ function Hotels() {
         searchInput.current.addEventListener("keypress", handleSearchKeyDown)
 
         getHotelData();
-
-        
-
     }, [])
 
     

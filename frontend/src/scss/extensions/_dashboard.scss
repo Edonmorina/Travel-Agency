@@ -9,5 +9,137 @@
         height: 80%;
         width: 80%;
         border-radius: 2rem;
+
+        @media screen and (max-width: 900px){
+            width: 90%;
+        }
+
+        .app__dashboardContainer__dashboard-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+
+            div {
+                height: 100%;
+                width: 50%;
+                border-bottom: 2px solid black;
+                cursor: pointer;
+                border-top-right-radius: 2rem;
+                background-color: rgba(213, 52, 101, 0.25);
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: rgba(213, 52, 101, 0.5);
+                    transition: all 0.2s ease-in-out;
+                }
+                
+                &:first-child {
+                    border-right: 2px solid black;
+                    border-top-left-radius: 2rem;
+                    border-top-right-radius: 0rem;
+
+                }
+                h1 {
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        .app__dashboardContainer__dashboard-bodyContainer {
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            height: 100%;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            padding: 2rem;
+            overflow-y: scroll;
+            .app__dashboard-addHotel {
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: flex;
+
+
+                .hotels__input {
+                    z-index: 2;
+                    width: 25%;
+                    height: 2.5rem;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                    margin-bottom: 2rem;
+
+                    @media screen and (max-width: 600px){
+                        width: 40%;
+                    }
+                }
+
+                button {
+                    all: unset;
+                    padding: 1rem 2rem;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                    color: white;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    background-color: teal;
+                }
+            }
+
+            .app__dashboard-addFlight {
+                height: 100%;
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                .hotels__input {
+                    z-index: 2;
+                    width: 25%;
+                    height: 2.5rem;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                    margin-bottom: 2rem;
+
+                    @media screen and (max-width: 600px){
+                        width: 40%;
+                    }
+                    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    all: unset;
+                    padding: 1rem 2rem;
+                    border-radius: 1rem;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0.75);
+                    color: white;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        transition: all 0.3s ease-in-out;
+                    }
+                    background-color: teal;
+                }
+            }
+        }
     }
 }
