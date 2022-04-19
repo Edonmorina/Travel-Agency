@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:4306
--- Generation Time: Apr 17, 2022 at 04:37 PM
+-- Generation Time: Apr 19, 2022 at 03:48 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -48,7 +48,8 @@ INSERT INTO `flights` (`flight_id`, `departure_time`, `arrival_time`, `departure
 (1, '2022-04-18 01:22:20', '2022-04-22 01:21:01', 'depLocation1', 'arrLocation1', 'airline1', 15, 275, 'flightType1', 0),
 (2, '2022-04-18 01:22:20', '2022-04-22 01:21:01', 'depLocation2', 'arrLocation2', 'airline2', 14, 276, 'flightType2', 3),
 (3, '2022-04-07 11:24:50', '2022-04-08 15:32:45', 'Prishtina', 'Istanbul', 'Turkish Airlines', 4, 312, 'Two way', 0),
-(4, '2022-04-07 11:24:50', '2022-04-08 15:32:45', 'Prishtina', 'Istanbul', 'Turkish Airlines', 4, 312, 'Two way', 2);
+(4, '2022-04-07 11:24:50', '2022-04-08 15:32:45', 'Prishtina', 'Istanbul', 'Turkish Airlines', 4, 312, 'Two way', 2),
+(5, '2022-04-07 03:15:00', '2022-04-19 10:16:00', 'London', 'Valleta', 'British Airways', 4, 435, 'Two Way', 1);
 
 -- --------------------------------------------------------
 
@@ -73,7 +74,9 @@ CREATE TABLE `hotels` (
 
 INSERT INTO `hotels` (`hotel_id`, `hotel_name`, `hotel_location`, `description_title`, `description`, `rating`, `reviews`, `price`) VALUES
 (1, 'name1', 'location1', 'descTitle1', 'desc1', '3', 15, 221),
-(2, 'name2', 'location2', 'descTitle2', 'desc2', '4', 13, 254);
+(2, 'name2', 'location2', 'descTitle2', 'desc2', '4', 13, 254),
+(3, 'a', 'a', 'a', 'a', '3', 14, 514),
+(5, 'b', 'b', 'b', 'b', '6', 14, 142);
 
 -- --------------------------------------------------------
 
@@ -99,7 +102,16 @@ INSERT INTO `users` (`users_id`, `users_uid`, `users_pwd`, `users_email`) VALUES
 (4, 'test321', '$2y$10$kQJ6oOjSbMSpxOi7afvDDeqa2cUvKwO2eLgRorEbBKWNP.Xe4Qp2y', 'test321@hotmail.com'),
 (5, 'testest', '$2y$10$CiBLxgjfzY5tcPPUVnQDq.uL0YLRjEEYodiSyIBft4xHHclduU3zi', 'testest@hotmail.com'),
 (6, 'tata', '$2y$10$GjMUU.ouj4BahlxiYA5DtOb97PKJsc1/DxiYs3VJnUeWqaBQ9AzH2', 'tata@hotmail.com'),
-(7, 'edonmorina', '$2y$10$HT/6bldPrQDTI4L/CwmB7.Xykb7SyUht/dGR7EX9ppVPwVWHAUzE6', 'edonmorinaaa@hotmail.com');
+(7, 'edonmorina', '$2y$10$HT/6bldPrQDTI4L/CwmB7.Xykb7SyUht/dGR7EX9ppVPwVWHAUzE6', 'edonmorinaaa@hotmail.com'),
+(8, 'aaaaa', '$2y$10$sh3X4KAtK4VptJSVb61lZelHeCDnpW2yzw3lzWotA6iCljEuziome', 'aaaa@hotmail.com'),
+(9, 'edonmorinaaa', '$2y$10$Y.YIhk0h0c6FdXXwGhzX2uUl92Y5kIUdIW5.IbpqCsSt24P3AP7Te', 'edonmorina@gmail.com'),
+(10, 'testestest', '$2y$10$3ey/JhNFoxni9orEUVe5yecNgBcs2ng9s/nszS5.PyaHd.rjEISYm', 'testestest@hotmail.com'),
+(11, 'username', '$2y$10$hmA9cZf3JWQyd/4GXRbsEuNd6mu4EQvNrqWm0iLGjCU0MtiBRiuY6', 'email@hotmail.com'),
+(12, 'username1', '$2y$10$CRRJhOYMm2i5cfh8dHb.M.6Xa6x1AjSDBRuqnTQgK8v1qCET8XEX2', 'email1@hotmail.com'),
+(13, 'test231', '$2y$10$CGdlyNCO8nZaO7tRjEcHnuGuMRj95fBIE1fwPqSHtl0p3ZWU35dxC', 'test231@hotmail.com'),
+(14, 'tes456', '$2y$10$059uJM5emJmZKt53fKQ8e.XI8ueWr1Y4Uevc4JcMkoFuARMQA6txi', 'test456@hotmail.com'),
+(15, 'test612', '$2y$10$Gnul19Ei7S15lhnhvh6kyOpd1ajVRd/O84qYHMUvMXonyWMjv82v6', 'test612@hotmail.com'),
+(16, 'taata', '$2y$10$0HykOFFDxxajFuij5O8S4.550y81Mk0OR7p0ftsMwTWXD7naq7dk6', 'tat@hotmail.com');
 
 --
 -- Indexes for dumped tables
@@ -132,19 +144,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `flights`
 --
 ALTER TABLE `flights`
-  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hotels`
 --
 ALTER TABLE `hotels`
-  MODIFY `hotel_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `hotel_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
